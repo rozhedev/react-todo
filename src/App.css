@@ -1,4 +1,10 @@
 .App {
   text-align: center;
+  /* background-color: #f5f3f8; */
+  min-height: 100vh;
 }
 
+.title {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}

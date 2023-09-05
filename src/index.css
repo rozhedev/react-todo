@@ -5,9 +5,18 @@
 }
 
 body {
-  margin: 0;
-  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+    margin: 0;
+    font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
 }
 
+:root {
+    --accent: #f4d33f;
+    --darken-accent: #dbbe3c;
+    --primary-lightgray: #f2f2f2;
+    --secondary-lightgray: #e4e4e4;
+    --primary-darkgray: #222;
+    --secondary-darkgray: #444;
+    --darken-lightgray: #999
+}

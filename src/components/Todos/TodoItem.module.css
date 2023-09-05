@@ -1,0 +1,48 @@
+.todoItem, .todoItemComplete {
+    padding: 0.5rem 0.25rem 0.5rem 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.5rem;
+    border: 2px solid var(--secondary-lightgray);
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--primary-darkgray);
+    background-color: #fff;
+    transition: .6s all;
+}
+
+.todoItemComplete {
+    background-color: var(--primary-lightgray);
+}
+
+.todoItemComplete .todoItemContent {
+    color: var(--darken-lightgray);
+    text-decoration: line-through;
+}
+
+.todoItemComplete .todoItemIcon {
+    color: var(--darken-lightgray);
+}
+
+.todoItem:hover {
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+
+}
+
+.todoItemContent {
+    margin-left: 0.35rem;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.todoItemContent span {
+    margin-left: 0.5rem;
+}
+
+.todoItemIcon {
+    color: var(--secondary-darkgray);
+}
+
+.todoItemBtnGroup {}

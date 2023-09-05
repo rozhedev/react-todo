@@ -1,0 +1,14 @@
+.todoList {
+    margin: 2rem auto;
+    width: 100%;
+}
+
+.todoList > *:not(:first-of-type) {
+    margin-top: 1rem;
+}
+
+.TodoListStatusText {
+    margin-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
