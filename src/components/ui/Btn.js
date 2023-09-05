@@ -1,18 +1,17 @@
 import styles from "./Btn.module.css";
 
-const Btn = ({ isBig, isDelete, isCompleted, completeItem, todo, onClickHandler, deleteItem, ...props }) => {
-    let handler;
-    if (isDelete) handler = (e) => deleteItem(todo.id)
-    else if (isCompleted) handler = (e) => completeItem(todo.id)
-    else handler = onClickHandler
-
+const Btn = ({ isBig, isDelete, todo, disabled, onClickHandler, children, ...props }) => {
     return (
         <button
-            className={isBig ? styles.btnBig : styles.btn}
-            onClick={handler}
+            className={`
+                ${isBig ? styles.btnBig : styles.btn}
+                ${disabled && styles.btnDisabled}
+                `}
+            onClick={onClickHandler}
+            disabled={disabled}
             {...props}
         >
-            {props.children}
+            {children}
         </button>
     );
 };

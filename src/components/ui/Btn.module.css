@@ -22,3 +22,14 @@
     border: 2px solid var(--darken-accent);
     background-color: var(--accent);
 }
+
+.btnDisabled {
+    background-color: var(--primary-lightgray);
+    color: var(--darken-lightgray);
+}
+.btnDisabled:hover {
+    border: 2px solid var(--secondary-lightgray);
+    color: var(--darken-lightgray);
+    background-color: var(--primary-lightgray);
+    cursor: not-allowed;
+}

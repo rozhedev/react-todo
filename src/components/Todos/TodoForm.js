@@ -32,7 +32,6 @@ const TodoForm = ({ addTodoData, ...props }) => {
                 type="submit"
                 id="btn-submit"
                 isBig={true}
-                isDelete={false}
                 title="btn-submit"
             >
                 Submit

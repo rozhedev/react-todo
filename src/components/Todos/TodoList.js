@@ -1,7 +1,7 @@
 import styles from "./TodoList.module.css";
 import TodoItem from "./TodoItem";
 
-const TodoList = ({ todoData, completedTodos, completeItem, deleteItem, props }) => {
+const TodoList = ({ todoData, completedTodos, toggleBtnState, completeItem, deleteItem, props }) => {
     const startText = "Nothing added";
     const completedEndWord = "todos";
 
@@ -13,6 +13,7 @@ const TodoList = ({ todoData, completedTodos, completeItem, deleteItem, props })
                         key={item.id}
                         todo={item}
                         isCompleted={item.isCompleted}
+                        toggleBtnState={toggleBtnState}
                         deleteItem={deleteItem}
                         completeItem={completeItem}
                     ></TodoItem>

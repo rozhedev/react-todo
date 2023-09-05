@@ -3,7 +3,7 @@ import { faNoteSticky, faCheck, faTrashAlt, faTrashCanArrowUp } from "@fortaweso
 import styles from "./TodoItem.module.css";
 import Btn from "../ui/Btn";
 
-const TodoItem = ({ todo, completeItem, isCompleted, deleteItem, props }) => {
+const TodoItem = ({ todo, toggleBtnState, completeItem, isCompleted, deleteItem, props }) => {
     return (
         <div className={`${styles.todoItem} ${todo.isCompleted && styles.todoItemComplete}`}>
             <div className={styles.todoItemContent}>
@@ -17,12 +17,9 @@ const TodoItem = ({ todo, completeItem, isCompleted, deleteItem, props }) => {
                 <Btn
                     type="button"
                     isBig={false}
-                    isDelete={true}
-                    isCompleted={false}
                     id="delete-btn"
-                    title="delete-btn"
-                    todo={todo}
-                    deleteItem={deleteItem}
+                    title="delete task"
+                    onClick={(e) => deleteItem(todo.id)}
                 >
                     <FontAwesomeIcon
                         icon={faTrashAlt}
@@ -32,12 +29,12 @@ const TodoItem = ({ todo, completeItem, isCompleted, deleteItem, props }) => {
                 <Btn
                     type="button"
                     isBig={false}
-                    isDelete={false}
-                    isCompleted={true}
                     id="complete-btn"
-                    title="complete-btn"
-                    todo={todo}
-                    completeItem={completeItem}
+                    title="complete task"
+                    onClick={(e) => {
+                        completeItem(todo.id);
+                        toggleBtnState();
+                    }}
                 >
                     <FontAwesomeIcon
                         icon={isCompleted ? faTrashCanArrowUp : faCheck}

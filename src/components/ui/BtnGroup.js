@@ -3,8 +3,7 @@ import styles from "./BtnGroup.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSync, faTrashAlt } from "@fortawesome/free-solid-svg-icons";
 
-const BtnGroup = ({ todoData, delCompleteTodos, delAllTodos, ...props }) => {
-    const varName = null;
+const BtnGroup = ({ todoData, disabled, delCompleteTodos, delAllTodos, ...props }) => {
     return (
         <div className={styles.btnGroup}>
             {todoData.length > 0 && (
@@ -13,7 +12,7 @@ const BtnGroup = ({ todoData, delCompleteTodos, delAllTodos, ...props }) => {
                         type="button"
                         isBig={true}
                         isDelete={false}
-                        id="reset-all-btn"
+                        id="delete-all-btn"
                         title="clear all task"
                         onClick={(e) => delAllTodos()}
                     >
@@ -26,8 +25,9 @@ const BtnGroup = ({ todoData, delCompleteTodos, delAllTodos, ...props }) => {
                         type="button"
                         isBig={true}
                         isDelete={false}
-                        id="delete-all-btn"
+                        id="delete-completed-btn"
                         title="clear completed task"
+                        disabled={disabled}
                         onClick={(e) => delCompleteTodos()}
                     >
                         <FontAwesomeIcon
