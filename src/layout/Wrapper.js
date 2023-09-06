@@ -1,10 +1,6 @@
-import styles from './Wrapper.module.css';
+import styles from "./Wrapper.module.css";
 
-const Wrapper = ({ ...props }) => {
-   return (
-       <div className={styles.wrapper}>
-           {props.children}
-       </div>
-   );
-}
+const Wrapper = ({ children, ...props }) => {
+    return <div className={styles.wrapper}>{children}</div>;
+};
 export default Wrapper;

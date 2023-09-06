@@ -41,21 +41,12 @@ function App() {
     const filterTodoState = (bool) => todoData.filter((todo) => todo.isCompleted === bool);
 
     const completedTodos = filterTodoState(true);
-    
-    
-    // * Handlers for btn group
-    const [btnDisabled, setBtnDisabled] = useState(true);
 
+    // * Handlers for btn group
     const delCompleteTodosHandler = () => {
         setTodoData(filterTodoState(false));
-        setBtnDisabled(true)
     };
     const delAllTodosHandler = () => setTodoData([]);
-
-    const toggleBtnStateHandler = () => {
-        filterTodoState(true).length > 0 ? setBtnDisabled(false) : setBtnDisabled(true)
-    }
-
 
     return (
         <div className="App">
@@ -63,8 +54,8 @@ function App() {
                 <h1 className="title">Todo App</h1>
                 <TodoForm addTodoData={addTodoDataHandler}></TodoForm>
                 <BtnGroup
+                    isCompletedTodos={!!completedTodos.length}
                     todoData={todoData}
-                    disabled={btnDisabled}
                     delCompleteTodos={delCompleteTodosHandler}
                     delAllTodos={delAllTodosHandler}
                 ></BtnGroup>
@@ -73,7 +64,6 @@ function App() {
                     completedTodos={completedTodos}
                     deleteItem={deleteItemHandler}
                     completeItem={completeItemHandler}
-                    toggleBtnState={toggleBtnStateHandler}
                 ></TodoList>
             </Wrapper>
         </div>

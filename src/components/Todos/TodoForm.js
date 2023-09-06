@@ -32,7 +32,7 @@ const TodoForm = ({ addTodoData, ...props }) => {
                 type="submit"
                 id="btn-submit"
                 isBig={true}
-                title="btn-submit"
+                title="Submit"
             >
                 Submit
             </Btn>
