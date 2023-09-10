@@ -1,4 +1,10 @@
-# React App
+# React Todo App
+First project uses React basic concepts. 
+Functionality list:
+* Input validation.
+* Completing task.
+* Counter completed tasks.
+* Buttons for reset task list & delete completed tasks.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
