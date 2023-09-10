@@ -13,6 +13,7 @@ body {
 
 :root {
     --accent: #f4d33f;
+    --error-red: #df5252;
     --darken-accent: #dbbe3c;
     --primary-lightgray: #f2f2f2;
     --secondary-lightgray: #e4e4e4;

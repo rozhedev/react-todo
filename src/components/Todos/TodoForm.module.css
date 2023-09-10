@@ -1,5 +1,19 @@
 .todoForm {
     margin: 1rem auto;
     display: flex;
-    align-items: center;
+    align-items: stretch;
+}
+
+.formController {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.formErrMessage {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-align: left;
+    color: var(--error-red);
 }

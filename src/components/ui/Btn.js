@@ -1,6 +1,6 @@
 import styles from "./Btn.module.css";
 
-const Btn = ({ isBig, isDelete, todo, disabled = false, children, ...props }) => {
+const Btn = ({ isBig, disabled = false, children, ...props }) => {
     return (
         <button
             className={`
